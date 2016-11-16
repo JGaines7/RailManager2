@@ -1,0 +1,26 @@
+#include "Tile.h"
+#include <iostream>
+Tile::Tile()
+{
+
+    const int width = 8000;
+    const int height = 8000;
+
+    m_map = new tileTest* [width];
+
+    for(int x = 0; x < width; x++)
+    {
+        m_map[x] = new tileTest[height];
+    }
+
+    std::cout << "Sizeof tile: " <<  sizeof(Tile) << "\n";
+    //std::cout << "Sizeof struct x: " << sizeof(testStruct) << "\n";
+    std::cout << "Sizeof 1000 array of x: " << sizeof(theArray) << "\n";
+     std::cout << "Sizeof test: " << sizeof(m_map) << "\n";
+     std::cout << "m_map[10][500].tileType = " << (uint8_t)m_map[10][500].tileType << "\n";
+}
+
+Tile::~Tile()
+{
+    //dtor
+}
