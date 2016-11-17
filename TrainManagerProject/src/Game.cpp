@@ -3,17 +3,23 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <iostream>
-
+#include "imgui.h"
+#include "imgui-sfml.h"
 #include "gameState.h"
+
 
 Game::Game()
 {
     //Setup window
-    m_window.create(sf::VideoMode(800, 600), "City Builder");
+    m_window.create(sf::VideoMode(800, 600), "Rail Manager 2: Winter Assault");
     m_window.setFramerateLimit(60);
 
-    loadTextures();
 
+    ImGui::SFML::Init(m_window);
+
+
+    //setup textures (simple)
+    loadTextures();
     m_background.setTexture(m_textureManager.getRef("background"));
 
     //setup font

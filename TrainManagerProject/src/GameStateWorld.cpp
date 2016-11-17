@@ -19,6 +19,7 @@ GameStateWorld::GameStateWorld(Game* game):
     m_mainView.setCenter(pos);
     m_gridView->setCenter(pos);
 
+    //set view to draw gameworld on
     m_gameWorld.setView(m_gridView);
 
     m_zoomLevel = 1.0f;
@@ -115,16 +116,23 @@ bool GameStateWorld::handleMouseInputs(sf::Event event)
         /* Zoom the view */
         case sf::Event::MouseWheelMoved:
         {
+
+            sf::Vector2f windowSize = sf::Vector2f(m_game->m_window.getSize());
+            m_gridView->setSize(windowSize.x, windowSize.y);
             if(event.mouseWheel.delta < 0)
             {
-                m_gridView->zoom(1.5f);
                 m_zoomLevel *= 1.5f;
+
             }
             else
             {
-                m_gridView->zoom(0.5f);
                 m_zoomLevel *= 0.5f;
+
             }
+            if ( m_zoomLevel > 3) m_zoomLevel = 3;
+            if ( m_zoomLevel < 0.25) m_zoomLevel = 0.25;
+
+            m_gridView->zoom(m_zoomLevel);
             eventMatch = true;
             break;
         }
@@ -150,7 +158,7 @@ bool GameStateWorld::handleKeyboardInputs(sf::Event event)
         {
             if(event.key.code == sf::Keyboard::Escape)
             {
-                m_game->m_window.close();
+                m_game->popState();
             }
             else if(event.key.code == sf::Keyboard::G)
             {

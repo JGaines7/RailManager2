@@ -3,6 +3,9 @@
 #include "GameStateWorld.h"
 #include "GameState.h"
 #include <iostream>
+#include "imgui.h"
+#include "imgui-sfml.h"
+#include "imgui_demo.cpp"
 
 
 GameStateStart::GameStateStart(Game* game)
@@ -32,7 +35,7 @@ void GameStateStart::draw(const float dt)
 
     //Placeholder main menu to know it's working
 
-	sf::String str("Press Space to start game.\nRight click+drag to pan.");
+	sf::String str("Press Space to start game.\nRight click+drag to pan.\nWASD to move");
 	sf::Text text;
 	text.setString(str);
 	text.setFillColor(sf::Color::White);
@@ -46,14 +49,34 @@ void GameStateStart::draw(const float dt)
 
 	m_game->m_window.draw(text);
 
-	//m_testUI.draw();
+
+
+	//ImGui::ShowTestWindow();
+	ImGui::Render();
 
     return;
 }
 
 void GameStateStart::update(const float dt)
 {
-    //m_testUI.update(dt);
+    ImGui::SFML::Update(m_game->m_window, sf::seconds(dt));
+
+    ImGui::Begin("Sample window"); // begin window
+
+                                       // Background color edit
+
+
+    // Window title text edit
+    char windowTitle[255] = "Test Text";
+    ImGui::InputText("Window title", windowTitle, 255);
+
+    if (ImGui::Button("Button!")) {
+        // this code gets if user clicks on the button
+        // yes, you could have written if(ImGui::InputText(...))
+        // but I do this to show how buttons work :)
+        std::cout << "Button presed\n";
+    }
+    ImGui::End(); // end window
 }
 
 
@@ -63,7 +86,7 @@ void GameStateStart::handleInput()
 
     while(m_game->m_window.pollEvent(event))
     {
-//        m_testUI.handleEvent(event);
+        ImGui::SFML::ProcessEvent(event);
 
         switch(event.type)
         {
@@ -94,7 +117,7 @@ void GameStateStart::handleInput()
                 if(event.key.code == sf::Keyboard::Escape)
                 {
                     std::cout << "Esc!\n";
-                    m_game->m_window.close();
+                    m_game->popState();
                 }
                 else if(event.key.code == sf::Keyboard::Space)
                 {
