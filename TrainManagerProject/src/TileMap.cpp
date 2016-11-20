@@ -41,9 +41,9 @@ bool TileMap::generateTileMap()
 
     std::cout << "resized tilemap!" << std::endl;
 
-    for(int x = 0; x < m_width; x++)
+    for(uint32_t x = 0; x < m_width; x++)
     {
-        for(int y = 0; y < m_height; y++)
+        for(uint32_t y = 0; y < m_height; y++)
         {
             Tile& tile = m_TileMap.at(x + y * m_width);
 

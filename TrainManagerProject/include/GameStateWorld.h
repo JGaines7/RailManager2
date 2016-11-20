@@ -42,6 +42,8 @@ class GameStateWorld : public GameState
     bool handleOther(sf::Event event);
 
     void updateWasdMovement(const float dt);
+
+    bool m_showFps = true;
 };
 
 

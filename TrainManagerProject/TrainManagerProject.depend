@@ -1217,7 +1217,7 @@
 	<string>
 	<vector>
 
-1479270935 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\game.h
+1479613310 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\game.h
 	<stack>
 	<SFML/Graphics.hpp>
 	"TextureManager.h"
@@ -1227,9 +1227,10 @@
 	<string>
 	<map>
 
-1479099238 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\gamestatestart.h
+1479616178 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\gamestatestart.h
 	<GameState.h>
 	<SFML/Graphics.hpp>
+	"UI_MainMenu.h"
 
 1478977605 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\gamestate.h
 	"Game.h"
@@ -1263,16 +1264,14 @@
 1477530824 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\gamestate.cpp
 	"GameState.h"
 
-1479357227 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\gamestatestart.cpp
+1479616938 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\gamestatestart.cpp
 	"GameStateStart.h"
 	"GameStateWorld.h"
 	"GameState.h"
 	<iostream>
 	"imgui.h"
-	"imgui-sfml.h"
-	"imgui_demo.cpp"
 
-1479181597 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\gamestateworld.h
+1479617141 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\gamestateworld.h
 	<GameState.h>
 	"GameWorld.h"
 	<SFML/Graphics.hpp>
@@ -1288,11 +1287,14 @@
 	"TextureManager.h"
 	<vector>
 
-1479349400 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\gamestateworld.cpp
+1479616178 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\gamestateworld.cpp
 	"GameState.h"
 	"GameStateWorld.h"
 	<SFML/Graphics.hpp>
 	<iostream>
+	"imgui.h"
+	"imgui-sfml.h"
+	"ControlConstants.h"
 
 1479259380 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\gameworld.cpp
 	"GameWorld.h"
@@ -1308,16 +1310,16 @@
 	"Tile.h"
 	<iostream>
 
-1479345039 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\game.cpp
+1479616190 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\game.cpp
 	<stack>
 	<SFML/Graphics.hpp>
 	<SFML/System.hpp>
 	<iostream>
+	"gameState.h"
 	"imgui.h"
 	"imgui-sfml.h"
-	"gameState.h"
 
-1479261496 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\tilemap.cpp
+1479519314 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\tilemap.cpp
 	"TileMap.h"
 	<iostream>
 	<cstdlib>
@@ -1336,7 +1338,7 @@
 	<cstddef>
 	<cassert>
 
-1478156254 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\imgui-master\imgui-sfml.h
+1479597993 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\imgui-master\imgui-sfml.h
 	<SFML/System/Vector2.hpp>
 	<SFML/Graphics/Rect.hpp>
 	<SFML/Graphics/Color.hpp>
@@ -1425,4 +1427,63 @@
 	<stdlib.h>
 	<stddef.h>
 	<stdint.h>
+
+1479610721 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\include\ui_mainmenu.h
+	<SFML/Graphics.hpp>
+	"Game.h"
+	"imgui.h"
+	"imgui-sfml.h"
+
+1479614322 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\src\ui_mainmenu.cpp
+	"UI_MainMenu.h"
+	<iostream>
+
+1478156254 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\imgui-master\imgui-sfml.cpp
+	"imgui-SFML.h"
+	<imgui.h>
+	<SFML/OpenGL.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Window.hpp>
+	<cstddef>
+	<cassert>
+
+1479598358 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\imgui-master\imgui.cpp
+	"imgui.h"
+	"imgui_internal.h"
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	<stddef.h>
+	<stdint.h>
+	"stb_textedit.h"
+	<windows.h>
+	<imm.h>
+	"imgui_user.inl"
+
+1479058960 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\imgui-master\imgui_demo.cpp
+	"imgui.h"
+	<ctype.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdint.h>
+
+1479058960 source:c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\imgui-master\imgui_draw.cpp
+	"imgui.h"
+	"imgui_internal.h"
+	<stdio.h>
+	<malloc.h>
+	<stdlib.h>
+	<alloca.h>
+	"stb_rect_pack.h"
+	"stb_truetype.h"
+
+1479614032 c:\users\grunkie7\documents\github\railmanager2\trainmanagerproject\configuration\controlconstants.h
 

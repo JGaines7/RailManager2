@@ -1,49 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
-	<ActiveTarget name="Debug" />
-	<File name="src\Game.cpp" open="1" top="0" tabpos="4" split="2" active="1" splitpos="32" zoom_1="0" zoom_2="0">
+	<ActiveTarget name="Release" />
+	<File name="src\GameStateWorld.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1785" topLine="72" />
-			<Cursor2 position="255" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\FpsManager.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="304" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\GameState.cpp" open="0" top="0" tabpos="8" split="1" active="1" splitpos="32" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="26" topLine="0" />
-			<Cursor2 position="26" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\AnimationHandler.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="531" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\GameStateStart.cpp" open="1" top="0" tabpos="2" split="2" active="2" splitpos="32" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="103" topLine="29" />
-			<Cursor2 position="683" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="src\GameStateWorld.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="811" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="src\GameWorld.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="424" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="2" active="1" splitpos="32" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="224" topLine="0" />
-			<Cursor2 position="112" topLine="0" />
+			<Cursor1 position="2152" topLine="59" />
 		</Cursor>
 	</File>
 	<File name="src\TextureManager.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -51,14 +12,9 @@
 			<Cursor1 position="341" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\TileMap.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\GameState.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="32" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1102" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="src\Tile.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="97" topLine="0" />
+			<Cursor1 position="26" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\TileDefinitions.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -66,62 +22,54 @@
 			<Cursor1 position="265" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\TileMap.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3626" topLine="84" />
-		</Cursor>
-	</File>
-	<File name="include\Tile.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="572" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="include\TextureManager.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="534" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\imgui.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\GameWorld.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="70294" topLine="361" />
-		</Cursor>
-		<Folding>
-			<Collapse line="11" />
-		</Folding>
-	</File>
-	<File name="include\GameWorld.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="304" topLine="1" />
+			<Cursor1 position="304" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\GameStateWorld.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="imgui-master\imgui-sfml.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="654" topLine="6" />
+			<Cursor1 position="464" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\imgui_draw.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="imgui-master\imgui.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="402" topLine="5" />
+			<Cursor1 position="69841" topLine="954" />
 		</Cursor>
 	</File>
-	<File name="include\GameStateStart.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="imgui-master\imgui.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="329" topLine="0" />
+			<Cursor1 position="8347" topLine="105" />
 		</Cursor>
 	</File>
-	<File name="src\imgui-SFML.cpp" open="1" top="1" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\GameStateStart.cpp" open="1" top="0" tabpos="19" split="0" active="1" splitpos="32" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="11937" topLine="328" />
+			<Cursor1 position="343" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\FpsManager.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="304" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Game.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="32" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1567" topLine="61" />
 		</Cursor>
 	</File>
 	<File name="include\GameState.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="61" topLine="0" />
+			<Cursor1 position="484" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Game.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\AnimationHandler.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="111" topLine="0" />
+			<Cursor1 position="531" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\AnimationHandler.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -129,5 +77,66 @@
 			<Cursor1 position="1235" topLine="28" />
 		</Cursor>
 	</File>
-	<EditorTabsLayout layout="08d1b988582bcf1b007100ec00000002=2;TrainManagerProject:include\GameState.h,3;TrainManagerProject:src\GameStateStart.cpp,4;TrainManagerProject:src\FpsManager.cpp,5;TrainManagerProject:src\Game.cpp,6;TrainManagerProject:include\GameStateWorld.h,7;TrainManagerProject:src\GameWorld.cpp,8;TrainManagerProject:src\TileMap.cpp,9;TrainManagerProject:include\TileMap.h,10;TrainManagerProject:src\GameStateWorld.cpp,11;TrainManagerProject:include\Game.h,15;TrainManagerProject:src\imgui.cpp,*16;TrainManagerProject:src\imgui-SFML.cpp,17;TrainManagerProject:src\imgui_draw.cpp|08d1b698582bcf1b0071019300000003=+12;TrainManagerProject:include\Tile.h,13;TrainManagerProject:include\GameWorld.h,14;TrainManagerProject:include\GameStateStart.h@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=08d1b988582bcf1b007100ec00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=08d1b698582bcf1b0071019300000003;caption=;state=2098172;dir=2;layer=0;row=1;pos=0;prop=100000;bestw=848;besth=394;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(2,0,1)=458|" />
+	<File name="main.cpp" open="1" top="0" tabpos="10" split="2" active="2" splitpos="32" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="111" topLine="0" />
+			<Cursor2 position="249" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\GameStateStart.h" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="499" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TileMap.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="465" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="include\Game.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="505" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="include\TileMap.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1102" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="include\GameStateWorld.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1079" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="configuration\ControlConstants.h" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="150" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\GameWorld.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="152" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\UI_MainMenu.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1032" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="src\Tile.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="97" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\UI_MainMenu.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="723" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\Tile.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="528" topLine="0" />
+		</Cursor>
+	</File>
+	<EditorTabsLayout layout="0d1d2d805830c9e000001df800000002=0;TrainManagerProject:include\GameState.h,1;TrainManagerProject:src\FpsManager.cpp,2;TrainManagerProject:src\Game.cpp,3;TrainManagerProject:include\GameStateWorld.h,4;TrainManagerProject:src\GameWorld.cpp,5;TrainManagerProject:src\TileMap.cpp,*12;TrainManagerProject:src\GameStateWorld.cpp,6;TrainManagerProject:include\TileMap.h,7;TrainManagerProject:include\Game.h,8;TrainManagerProject:main.cpp,15;TrainManagerProject:include\UI_MainMenu.h,16;TrainManagerProject:src\UI_MainMenu.cpp,18;TrainManagerProject:imgui-master\imgui-sfml.h,19;TrainManagerProject:imgui-master\imgui.h,20;TrainManagerProject:imgui-master\imgui.cpp|0d1d2ef85830c9e000001e3600000003=9;TrainManagerProject:include\Tile.h,10;TrainManagerProject:include\GameWorld.h,+11;TrainManagerProject:src\GameStateStart.cpp,13;TrainManagerProject:include\GameStateStart.h,14;TrainManagerProject:src\GameState.cpp,17;TrainManagerProject:imgui-master\imgui_demo.cpp,22;TrainManagerProject:configuration\ControlConstants.h@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0d1d2d805830c9e000001df800000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0d1d2ef85830c9e000001e3600000003;caption=;state=2098172;dir=2;layer=0;row=1;pos=0;prop=100000;bestw=848;besth=394;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(2,0,1)=518|" />
 </CodeBlocks_layout_file>

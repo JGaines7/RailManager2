@@ -2,8 +2,10 @@
 #include "GameStateWorld.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "imgui.h"
+#include "imgui-sfml.h"
+#include "ControlConstants.h"
 
-const float VIEW_WASD_SPEED = 1000; // px/s2
 
 GameStateWorld::GameStateWorld(Game* game):
     m_gameWorld(game)
@@ -11,6 +13,7 @@ GameStateWorld::GameStateWorld(Game* game):
     m_gridView = std::make_shared<sf::View>();
     m_game = game;
     sf::Vector2f pos = sf::Vector2f(m_game->m_window.getSize());
+    std::cout << pos.x << ":" << pos.y << "\n";
     m_guiView.setSize(pos);
     m_mainView.setSize(pos);
     m_gridView->setSize(pos);
@@ -37,6 +40,12 @@ void GameStateWorld::draw(const float dt)
 
     m_game->m_window.clear(sf::Color::Black);
     m_game->m_window.setView(m_guiView);
+
+    m_game->m_background.setPosition(m_game->m_window.mapPixelToCoords(sf::Vector2i(0, 0)));
+    m_game->m_background.setScale(
+        m_mainView.getSize().x / float(m_game->m_background.getTexture()->getSize().x),
+        m_mainView.getSize().y / float(m_game->m_background.getTexture()->getSize().y));
+
     m_game->m_window.draw(m_game->m_background);
 
     m_game->m_window.setView(*m_gridView);
@@ -50,6 +59,39 @@ void GameStateWorld::draw(const float dt)
 
 void GameStateWorld::update(const float dt)
 {
+    //draw placeholder menubar
+    if (ImGui::BeginMainMenuBar())
+    {
+        if (ImGui::BeginMenu("File"))
+        {
+            if (ImGui::MenuItem("Exit")) {m_game->popState();}
+            ImGui::EndMenu();
+        }
+        if (ImGui::BeginMenu("Debug"))
+        {
+            if (ImGui::MenuItem("Show FPS", "", m_showFps)) {m_showFps = !m_showFps;}
+            if (ImGui::MenuItem("Show Help", "", false, false)) {}
+            ImGui::EndMenu();
+        }
+        ImGui::EndMainMenuBar();
+    }
+    bool popen = false;
+    if(m_showFps)
+    {
+
+
+        ImGui::SetNextWindowPos(sf::Vector2f(5,25));
+        if (!ImGui::Begin("Example: Fixed Overlay", &popen, sf::Vector2f(0,0), 0.3f, ImGuiWindowFlags_NoTitleBar|ImGuiWindowFlags_NoResize|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings))
+        {
+            ImGui::End();
+            return;
+        }
+
+        ImGui::Text("FPS: %.1f", m_game->getFps());
+        ImGui::End();
+
+    }
+
 
     updateWasdMovement(dt);
     return;
@@ -129,8 +171,8 @@ bool GameStateWorld::handleMouseInputs(sf::Event event)
                 m_zoomLevel *= 0.5f;
 
             }
-            if ( m_zoomLevel > 3) m_zoomLevel = 3;
-            if ( m_zoomLevel < 0.25) m_zoomLevel = 0.25;
+            if ( m_zoomLevel > c_control::MIN_ZOOM) m_zoomLevel = c_control::MIN_ZOOM;
+            if ( m_zoomLevel < c_control::MAX_ZOOM) m_zoomLevel = c_control::MAX_ZOOM;
 
             m_gridView->zoom(m_zoomLevel);
             eventMatch = true;
@@ -215,19 +257,19 @@ void GameStateWorld::updateWasdMovement(const float dt)
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
-        viewVelocity.x = -VIEW_WASD_SPEED * dt * m_zoomLevel; // pan faster if zoomed out (larger zoom level)
+        viewVelocity.x = -c_control::VIEW_WASD_SPEED * dt * m_zoomLevel; // pan faster if zoomed out (larger zoom level)
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
-        viewVelocity.x = VIEW_WASD_SPEED * dt * m_zoomLevel;
+        viewVelocity.x = c_control::VIEW_WASD_SPEED * dt * m_zoomLevel;
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
-        viewVelocity.y = -VIEW_WASD_SPEED * dt * m_zoomLevel;
+        viewVelocity.y = -c_control::VIEW_WASD_SPEED * dt * m_zoomLevel;
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
-        viewVelocity.y = VIEW_WASD_SPEED * dt * m_zoomLevel;
+        viewVelocity.y = c_control::VIEW_WASD_SPEED * dt * m_zoomLevel;
     }
     m_gridView->move(viewVelocity);
 }

@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include "TextureManager.h"
 
+
 class GameState;
 
 class Game
@@ -38,11 +39,14 @@ class Game
     GameState* peekState();
 
     //game utilities
-    void drawFps(float dt);
+    float getFps() { return m_fps;}
 
     void gameLoop();
 
     private:
+
+    void drawFps(float dt);
+    float m_fps;
 
     void loadTextures();
 

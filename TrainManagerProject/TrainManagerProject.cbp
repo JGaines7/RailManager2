@@ -20,13 +20,16 @@
 					<Add directory="include" />
 					<Add directory="SFML-2.4.0/include" />
 					<Add directory="imgui-master" />
+					<Add directory="configuration" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
+					<Add option="-lopengl32" />
 					<Add library="SFML-2.4.0/debug/libsfml-graphics-d.a" />
 					<Add library="SFML-2.4.0/debug/libsfml-window-d.a" />
 					<Add library="SFML-2.4.0/debug/libsfml-system-d.a" />
 					<Add directory="SFML-2.4.0/debug" />
+					<Add directory="imgui-master" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -36,16 +39,20 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O3" />
+					<Add option="-U__STRICT_ANSI__" />
 					<Add directory="include" />
 					<Add directory="SFML-2.4.0/include" />
 					<Add directory="imgui-master" />
+					<Add directory="configuration" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-lopengl32" />
 					<Add library="SFML-2.4.0/release/libsfml-graphics.a" />
 					<Add library="SFML-2.4.0/release/libsfml-window.a" />
 					<Add library="SFML-2.4.0/release/libsfml-system.a" />
 					<Add directory="SFML-2.4.0/release" />
+					<Add directory="imgui-master" />
 				</Linker>
 			</Target>
 		</Build>
@@ -59,6 +66,19 @@
 		<Unit filename="arialbi.ttf" />
 		<Unit filename="ariali.ttf" />
 		<Unit filename="ariblk.ttf" />
+		<Unit filename="configuration/ControlConstants.h" />
+		<Unit filename="imgui-master/imconfig-SFML.h" />
+		<Unit filename="imgui-master/imconfig.h" />
+		<Unit filename="imgui-master/imgui-SFML.cpp" />
+		<Unit filename="imgui-master/imgui-sfml.h" />
+		<Unit filename="imgui-master/imgui.cpp" />
+		<Unit filename="imgui-master/imgui.h" />
+		<Unit filename="imgui-master/imgui_demo.cpp" />
+		<Unit filename="imgui-master/imgui_draw.cpp" />
+		<Unit filename="imgui-master/imgui_internal.h" />
+		<Unit filename="imgui-master/stb_rect_pack.h" />
+		<Unit filename="imgui-master/stb_textedit.h" />
+		<Unit filename="imgui-master/stb_truetype.h" />
 		<Unit filename="include/AnimationHandler.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/GameState.h" />
@@ -69,6 +89,7 @@
 		<Unit filename="include/Tile.h" />
 		<Unit filename="include/TileDefinitions.h" />
 		<Unit filename="include/TileMap.h" />
+		<Unit filename="include/UI_MainMenu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="media/bg.png" />
 		<Unit filename="spr_grass.png" />
@@ -82,9 +103,7 @@
 		<Unit filename="src/TextureManager.cpp" />
 		<Unit filename="src/Tile.cpp" />
 		<Unit filename="src/TileMap.cpp" />
-		<Unit filename="src/imgui-SFML.cpp" />
-		<Unit filename="src/imgui.cpp" />
-		<Unit filename="src/imgui_draw.cpp" />
+		<Unit filename="src/UI_MainMenu.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
