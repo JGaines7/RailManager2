@@ -1,9 +1,9 @@
 #ifndef GAMESTATESTART_H
 #define GAMESTATESTART_H
 
-//#include "testUI.h"
 #include <GameState.h>
 #include <SFML/Graphics.hpp>
+#include "UI_MainMenu.h"
 
 
 class GameStateStart : public GameState
@@ -20,6 +20,10 @@ class GameStateStart : public GameState
     private:
 
     void loadgame();
+    UI_MainMenu m_mainMenu;
+
+    //utility
+    void resizeWindow(float width, float height);
 
 
 };

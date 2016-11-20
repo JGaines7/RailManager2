@@ -3,9 +3,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <iostream>
+#include "gameState.h"
 #include "imgui.h"
 #include "imgui-sfml.h"
-#include "gameState.h"
 
 
 Game::Game()
@@ -27,6 +27,8 @@ Game::Game()
 	{
 		std::cout << "Failed to load font!\n";
 	}
+
+
 
 }
 
@@ -66,8 +68,15 @@ void Game::gameLoop()
 
     while(m_window.isOpen())
     {
+
         sf::Time elapsed = clock.restart();
         float dt = elapsed.asSeconds();
+
+        //need to call this if there's no other render calls..
+        m_window.resetGLStates();
+
+        ImGui::SFML::Update(m_window, elapsed);
+
 
         if(peekState() == nullptr) continue;
         peekState()->handleInput();
@@ -75,8 +84,11 @@ void Game::gameLoop()
         m_window.clear(sf::Color::Black);
         peekState()->draw(dt);
 
-        //draw Debug overlay
+        //draw Debug overlay (move this to ui)
+        m_fps = 1.0 / dt;
         drawFps(dt);
+        ImGui::Render();
+
 
         m_window.display();
     }
@@ -109,7 +121,7 @@ void Game::drawFps(float dt)
 	text.setPosition(5, 5);
 	text.setCharacterSize(20);
 	text.setFont(m_font);
-	m_window.draw(text);
+	//m_window.draw(text);
 }
 
 
